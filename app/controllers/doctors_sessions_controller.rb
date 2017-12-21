@@ -11,6 +11,7 @@ class DoctorsSessionsController < ApplicationController
       end
 
       def show
+        @doctor = Doctor.all
       end
 
       def create

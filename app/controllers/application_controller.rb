@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method  :current_user
+  helper_method  :current_doctor
 
   def current_doctor
   @current_doctor ||= Doctor.find_by(id: session[:doctor_id])

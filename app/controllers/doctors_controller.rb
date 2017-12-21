@@ -7,6 +7,8 @@ class DoctorsController < ApplicationController
     @doctor = Doctor.find_by(params[:id])
   end
 
+
+
   def new
       @doctor = Doctor.new
     end
