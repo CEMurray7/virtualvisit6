@@ -5,7 +5,7 @@ class DoctorsSessionsController < ApplicationController
       end
 
       def index
-        redirect_to doctors_session_path
+        redirect_to new_doctors_session_path
 
 
       end
