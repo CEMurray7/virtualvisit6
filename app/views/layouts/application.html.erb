@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Virtualvisit6</title>
+    <title>Virtual Visit</title>
     <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all',
+                                              'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <h1>Virtual Visit</h1>
+        <img src="/virtualvisitlogo00.png" alt="virtual visit logo">
+        <%# image_tag("/images/virtualvisitlogo.png") %>
+        <nav>
+          <ul class="nav navbar-nav navbar-top">
+            <li><%= link_to "Home",  root_path %></li>
+            <li><%= link_to "Physician Sign-in", '#' %></li>
+            <li><%= link_to "Patient Sign-in", '#' %></li>
+            <li><%= link_to "Patient Sign Up", '#' %>
+            <li><%= link_to "Physician Sign Up", new_doctor_path %>
+            <li><%= link_to "FAQ", 'http://localhost:3000/pages/faq' %>
+          </ul>
+        </nav>
     <%= yield %>
   </body>
 </html>
