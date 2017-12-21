@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  before_action :require_logged_in, only: [:show]
   def new
         @user = User.new
       end
@@ -10,7 +11,7 @@ class SessionsController < ApplicationController
         @user = User.find_by(username: params[:username]).try(:authenticate, params[:password])
         if @user
           session[:user_id] = @user.id
-          redirect_to userdashboards_path
+          redirect_to root_path
         else
           flash[:notice] = "Not a valid username.  Please sign up first!"
           redirect_to new_user_path
@@ -18,6 +19,6 @@ class SessionsController < ApplicationController
       end
 
       def show
-
+        @users = User.all
       end
 end

@@ -13,7 +13,7 @@ class DoctorsController < ApplicationController
     def create
       @doctor = Doctor.new(doctor_params)
       if @doctor.save
-        redirect_to doctor_path, notice: 'Created Doctor'
+        redirect_to doctors_sessions_path, notice: 'Created Doctor'
       else
         render :new
       end
