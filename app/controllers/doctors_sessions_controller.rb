@@ -6,10 +6,10 @@ class DoctorsSessionsController < ApplicationController
 
       def index
         redirect_to new_doctors_session_path
-
-
       end
 
+      def questionniare
+      end
       def show
         @doctor = Doctor.all
       end
