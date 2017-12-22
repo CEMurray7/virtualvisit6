@@ -44,7 +44,7 @@ User.create(username: "ddarko"
             postal_code: "33204",
             country: "United States");
 
-Doctor.create(username: "ddarko"
+Doctor.create(username: "dwright"
               password_digest: "asdf1"
               name: "Deborah Wright",
               dob: 1992-09-06
