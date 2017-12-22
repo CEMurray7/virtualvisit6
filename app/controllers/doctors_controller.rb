@@ -7,7 +7,18 @@ class DoctorsController < ApplicationController
     @doctor = Doctor.find_by(params[:id])
   end
 
+  def edit
+    @doctor = Doctor.find(params[:id])
+  end
 
+  def update
+    @doctor = Doctor.find(params[:id])
+    if @doctor.update_attributes(doctor_params)
+      redirect_to doctors_session_path(@doctor)      # Handle a successful update.
+    else
+      render 'edit'
+    end
+  end
 
   def new
       @doctor = Doctor.new
