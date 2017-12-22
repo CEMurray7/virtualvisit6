@@ -14,7 +14,12 @@ class AppointmentsController < ApplicationController
     end
 
     def show
-
+      @appointments = Appointment.all
     end
   end
+
+  private
+  def appointment_params
+    params.require(:appointment).permit(:name, :symptoms, :blood_pressure, :temperature, :timestamp)
+
 end
