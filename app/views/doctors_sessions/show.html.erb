@@ -6,6 +6,7 @@
     <tr>
       <p><%= "Hello, Dr. #{current_doctor.name}" %>
           <%= link_to "Make an Appointment", appointment_path %>
+          <%= @waiting_list %>
 </p>
 <p>Welcome back!</p>
 <header class="navbar navbar-fixed-top navbar-inverse">

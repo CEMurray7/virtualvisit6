@@ -4,6 +4,7 @@ class AppointmentsController < ApplicationController
 
   def create
   end
+
   def new
     @appointment = Appointment.new(user: current_user)
     if @appointment.save!
