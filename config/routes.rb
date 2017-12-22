@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :sessions
   resources :doctors_sessions
   resources :appointments
+  resources :charges
   root to: 'pages#home'
   get "/pages/:page" => "pages#show"
 end
