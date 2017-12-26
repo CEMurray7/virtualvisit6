@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :pages, only: [] do
     collection do
-      get :FAQ, as: :faq
+      get :faq
       get :contact
     end
   end
