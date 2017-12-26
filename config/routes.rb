@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :charges
   root to: 'pages#home'
   # get "/pages/:page" => "pages#show"
-  get "/pages/FAQ" => "pages#FAQ"
+  get "/pages/FAQ" => "pages#FAQ", as: :faq
   get "/pages/contact" =>"pages#contact"
 end
