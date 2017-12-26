@@ -1,13 +1,13 @@
 class PagesController < ApplicationController
 
   def show
-    render template: "pages/#{params[:page]}"
+    # render template: "pages/#{params[:page]}"
   end
   def home
   end
   def contact
   end
-  def FAQ
+  def faq
   end
   def appointment
   end
