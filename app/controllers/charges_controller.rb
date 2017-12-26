@@ -2,10 +2,12 @@ class ChargesController < ApplicationController
   def new
   end
 
+# def index
+# end
   def create
     # Amount in cents
     @amount = 500
-
+   # set up params that coorilates to shopping cart amount
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
       :source  => params[:stripeToken]
