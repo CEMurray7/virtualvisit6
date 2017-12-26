@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   def contact
   end
   def FAQ
+    render template: 'pages/FAQ'
   end
   def appointment
   end
