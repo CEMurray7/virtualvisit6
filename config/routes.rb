@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   resources :appointments
   resources :charges
   root to: 'pages#home'
-  get "/pages/:page" => "pages#show"
+  # get "/pages/:page" => "pages#show"
+  get "/pages/FAQ" => "pages#FAQ"
+  get "/pages/contact" =>"pages#contact"
 end
