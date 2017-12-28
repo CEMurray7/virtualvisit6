@@ -1,17 +1,15 @@
 class DoctorsSessionsController < ApplicationController
 
-  def new
+    def new
         @doctor = Doctor.new
       end
 
       def index
-        redirect_to new_doctors_session_path
-
-
+        @appointment = Appointment.all
       end
 
       def show
-        @doctor = Doctor.all
+        @appointment = Appointment.all
       end
 
       def create
