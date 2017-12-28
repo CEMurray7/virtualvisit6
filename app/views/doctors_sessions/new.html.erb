@@ -10,7 +10,7 @@
   <%= form.label :password %>
   <%= form.password_field :password %>
 </p>
-<p>
-  <%= form.submit 'Sign In' %>
-</p>
+<button class="btn waves-effect waves-light" type="submit" name="action"> <%= form.submit "Sign In" %>
+  <i class="material-icons right">send</i>
+</button>
 <% end %>
