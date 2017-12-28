@@ -57,7 +57,7 @@
 #               postal_code: "33204",
 #               country: "United States");
 
-Appointment.create(user_id: 42,
+Appointment.create(user_id:"16",
                     name:  "Donnie Darko",
                     symptoms: "fever",
                     blood_pressure: "140/70",
