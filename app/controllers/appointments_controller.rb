@@ -14,26 +14,27 @@ class AppointmentsController < ApplicationController
     else
       render :new
     end
+  end
 
-    def show
-      @appointments = Appointment.all
-    end
+  def edit
+    @appointment = Appointment.find(params[:id])
+  end
 
-    def edit
-      @appointments = Appointment.find(params[:id])
-      end
-    def update
-      @appointments = Appointment.find(params[:id])
-      if @appointments.update_attributes(current_doctor)
-        redirect_to root_path
-      else
-        render 'edit'
-      end
+  def show
+    @appointments = Appointment.all
+  end
+
+  def update
+    @appointment = Appointment.find(params[:id])
+    if @appointment.update_attributes(doctor_id: current_doctor.id)
+      redirect_to root_path
+    else
+      render 'edit'
     end
   end
 
   private
-  def appointment_params
-    params.require(:appointment).permit(:name, :symptoms, :blood_pressure, :temperature, :timestamp)
-  end
+    def appointment_params
+      params.require(:appointment).permit(:name, :symptoms, :blood_pressure, :temperature, :timestamp)
+    end
 end
