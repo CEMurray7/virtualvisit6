@@ -24,13 +24,15 @@
     <%= f.email_field :email, autofocus: true, required: true %>
   </div>
 
-
+  <div class="field">
+  <%= f.label :gender %>
   <p>
     <input class="with-gap" name="group1" type="radio" id="male"/>
     <label for="male">Male</label>
     <input class="with-gap" name="group1" type="radio" id="female"/>
     <label for="female">Female</label>
   </p>
+</div>
 
 
   <div class="field">
@@ -42,8 +44,7 @@
     <%= f.label :city %><br />
     <%= f.text_field :city, autofocus: true, required: true %>
   </div>
-
-  <label>State</label>
+  <%= f.label :state %></br>
   <select class="browser-default">
     <option value="" disabled selected>Choose your State</option>
     <option value="AK">Alaska</option>
@@ -102,7 +103,8 @@
     <%= f.text_field :postal_code, autofocus: true, required: true %>
   </div>
 
-  <label>Country</label>
+<div class="field">
+  <%= f.label :country %>
   <select class="browser-default">
     <%# f.label :country %>
     <option value="" disabled selected>Choose your Country</option>
@@ -353,7 +355,7 @@
     <option value="Zambia">Zambia</option>
     <option value="Zimbabwe">Zimbabwe</option>
     </select>
-
+</div>
   <div class="field">
     <%= f.label :username %><br />
     <%= f.text_field :username %>
