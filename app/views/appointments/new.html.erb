@@ -1,5 +1,32 @@
 <h1>Welcome to Virtual Visits</h1>
 <p>Appointment</p>
+<%= form_for @appointment do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :symptoms %><br />
+    <%= f.text_area :symptoms, autofocus: true, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :blood_pressure %><br />
+    <%= f.text_field :blood_pressure, autofocus: true, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :temperature %><br />
+    <%= f.text_field :temperature, autofocus: true, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :medications %><br />
+    <%= f.text_field :medications, autofocus: true, required: true %>
+  </div>
+  <button class="btn waves-effect waves-light" type="submit" name="action"> <%= f.submit "Send" %>
+    <i class="material-icons right">send</i>
+  </button>
+  <% end %>
+
 
 
 
