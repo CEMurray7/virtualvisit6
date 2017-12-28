@@ -1,4 +1,6 @@
+<h1> hello <h1>
+<% @appointments.sort_by(&:created_at).each do |appointment| %>
+  <p>Name: <%= appointment.name  %></p>
+  <%= link_to "accept appointment", edit_appointment_path(current_doctor) %>
 
-
-
-      <iframe src="https://tokbox.com/embed/embed/ot-embed.js?embedId=51e6171d-9d47-4c82-ae87-35a53a8c3a68&room=DEFAULT_ROOM&iframe=true" width="600px" height="500px" allow="microphone; camera" ></iframe>
+<% end %>

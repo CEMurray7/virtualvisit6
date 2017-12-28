@@ -4,7 +4,6 @@ class DoctorsController < ApplicationController
   end
 
   def show
-    @doctor = Doctor.find_by(params[:id])
   end
 
   def edit
@@ -21,8 +20,9 @@ class DoctorsController < ApplicationController
   end
 
   def new
-      @doctor = Doctor.new
-    end
+    @doctor = Doctor.new
+  end
+
     def create
       @doctor = Doctor.new(doctor_params)
       if @doctor.save

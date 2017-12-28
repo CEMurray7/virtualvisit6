@@ -1,3 +1,14 @@
-<h1> hello <h1>
-  <%= @appointment.each do |appointment| %>
+<% if current_doctor %>
+  <h1>Physician Dashboard</h1>
+  <p><%= "Hello, Dr. #{current_doctor.username}" %></p>
+  <%= link_to "View Wait-List",  appointments_path() %>
+  <%= link_to "Edit Profile", edit_doctor_path(current_doctor) %>
+
+  <p>Welcome back!</p>
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <h1>Virtual Visit</h1>
+      <img src="/virtualvisitlogo00.png" alt="virtual visit logo" />
+    </div>
+  </header>
 <% end %>

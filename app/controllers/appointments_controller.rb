@@ -1,5 +1,7 @@
 class AppointmentsController < ApplicationController
+
   def index
+    @appointments = Appointment.all
   end
 
   def create
@@ -15,6 +17,18 @@ class AppointmentsController < ApplicationController
 
     def show
       @appointments = Appointment.all
+    end
+
+    def edit
+      @appointments = Appointment.find(params[:id])
+      end
+    def update
+      @appointments = Appointment.find(params[:id])
+      if @appointments.update_attributes(current_doctor)
+        redirect_to root_path
+      else
+        render 'edit'
+      end
     end
   end
 

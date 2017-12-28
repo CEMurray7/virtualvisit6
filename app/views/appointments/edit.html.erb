@@ -1,0 +1,11 @@
+<%= form_for @appointments, url: edit_appointment_path do |f| %>
+<p>
+
+<div class="field">
+  <%= f.label :doctor_id %><br />
+  <%= f.integer :doctor_id %>
+</div>
+  <p>
+    <%= form.submit 'Sign In' %>
+  </p>
+<% end %>
