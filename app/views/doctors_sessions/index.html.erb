@@ -1,7 +1,7 @@
 <% if current_doctor %>
   <h1>Physician Dashboard</h1>
   <p><%= "Hello, Dr. #{current_doctor.username}" %></p>
-  <%= link_to "View Wait-List",  appointments_path() %>
+  <%= link_to "View Wait-List",  appointments_path %>
   <%= link_to "Edit Profile", edit_doctor_path(current_doctor) %>
 
   <p>Welcome back!</p>
