@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :doctors
   resources :users
+
   resources :sessions
   resources :doctors_sessions
   resources :appointments

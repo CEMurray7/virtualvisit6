@@ -44,23 +44,35 @@
 #             postal_code: "33204",
 #             country: "United States");
 #
-# Doctor.create(username: "dwright",
-#               password_digest: "asdf1",
-#               name: "Deborah Wright",
-#               dob: 19920906,
-#               email: "dwright@doctors.co",
-#               phone_number: "786-234-2432",
-#               gender: "Female",
-#               address: "470 Doctors Drive",
-#               city: "Davie",
-#               state: "FL",
-#               postal_code: "33204",
-#               country: "United States");
+Doctor.create(username: "dwright",
+              password_digest: "asdf1",
+              name: "Deborah Wright",
+              dob: 19920906,
+              email: "dwright@doctors.co",
+              phone_number: "786-234-2432",
+              gender: "Female",
+              address: "470 Doctors Drive",
+              city: "Davie",
+              state: "FL",
+              postal_code: "33204",
+              country: "United States");
+
+              Doctor.create(username: "dwright",
+                            password_digest: "asdf1",
+                            name: "Deborah Wright",
+                            dob: 19920906,
+                            email: "dwright@doctors.co",
+                            phone_number: "786-234-2432",
+                            gender: "Female",
+                            address: "470 Doctors Drive",
+                            city: "Davie",
+                            state: "FL",
+                            postal_code: "33204",
+                            country: "United States");
 
 Appointment.create(user_id: 42,
-                    doctor_id: 17,
                     name:  "Donnie Darko",
-                 symptoms: "fever",
-                 blood_pressure: "140/70",
-                 temperature: "102"
+                    symptoms: "fever",
+                    blood_pressure: "140/70",
+                    temperature: "102"
                   )
