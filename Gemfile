@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 gem 'stripe'
-# gem 'wysiwyg-rails'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'hirb'
 gem 'bcrypt'
