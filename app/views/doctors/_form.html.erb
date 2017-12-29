@@ -1,18 +1,9 @@
-<% provide(:title, "Edit user") %>
-
 <%= form_for @doctor do |f| %>
 
 <div class="field">
   <%= f.label :name %><br />
   <%= f.text_field :name, autofocus: true, required: true %>
 </div>
-
-<div class="field">
-  <%= f.label :dob %><br />
-  <%= f.date_field :dob, autofocus: true, required: true %>
-</div>
-<!-- <input type="text" class="datepicker"> -->
-
 
 <div class="field">
   <%= f.label :phone_number %><br />
@@ -23,13 +14,6 @@
   <%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true, required: true %>
 </div>
-
-<p>
-  <input class="with-gap" name="group1" type="radio" id="male"/>
-  <label for="male">Male</label>
-  <input class="with-gap" name="group1" type="radio" id="female"/>
-  <label for="female">Female</label>
-</p>
 
 <div class="field">
   <%= f.label :address %><br />
@@ -95,12 +79,11 @@
   <option value="WY">Wyoming</option>
 </select>
 
-<!-- </div> -->
-
 <div class="field">
   <%= f.label :postal_code %><br />
   <%= f.text_field :postal_code, autofocus: true, required: true %>
 </div>
+
 <label>Country</label>
 <select class="browser-default">
   <%# f.label :country %>
@@ -194,7 +177,6 @@
   <option value="Guadeloupe">Guadeloupe</option>
   <option value="Guam">Guam</option>
   <option value="Guatemala">Guatemala</option>
-
   <option value="Guernsey">Guernsey</option>
   <option value="Guinea">Guinea</option>
   <option value="Guinea-Bissau">Guinea-Bissau</option>
@@ -353,26 +335,26 @@
   <option value="Zimbabwe">Zimbabwe</option>
   </select>
 
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </div>
+<div class="field">
+  <%= f.label :username %><br />
+  <%= f.text_field :username %>
+</div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+<div class="field">
+  <%= f.label :password %>
+  <% if @minimum_password_length %>
+  <em>(<%= @minimum_password_length %> characters minimum)</em>
+  <% end %><br />
+  <%= f.password_field :password, autocomplete: "off" %>
+</div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+<div class="field">
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation, autocomplete: "off" %>
+</div>
 
 <div class="actions">
-  <%= submit_tag "Edit Profile" %>
+  <% f.submit "Sign up" %>
 </div>
 
 <% end %>
