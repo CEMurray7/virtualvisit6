@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <% provide(:title, "Edit doctor") %>
 <h2>Edit your Profile</h2>
 <%= form_for @doctor do |f| %>
@@ -724,16 +724,16 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
-<<<<<<< HEAD
+
   <p>Please review your edits before submitting your changes</p>
   <button class="btn waves-effect waves-light" type="submit" name="action"> <%= f.submit "Confirm Changes" %>
     <i class="material-icons right">send</i>
   </button>
-=======
+
 
 <div class="actions">
   <%= submit_tag "Edit Profile" %>
 </div>
->>>>>>> 084d92c543c68c8288a2e4621d8bc378a698dcaf
+
 
 <% end %>
