@@ -27,7 +27,8 @@ class AppointmentsController < ApplicationController
   def update
     @appointment = Appointment.find(params[:id])
     if @appointment.update_attributes(doctor_id: current_doctor.id)
-      redirect_to root_path
+      redirect_to virtual_visit_path
+
     else
       render 'edit'
     end
