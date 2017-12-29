@@ -25,7 +25,7 @@
     </div>
     <h4 class="center-align" id="title">Virtual Visit</h4>
     <nav class="col s12 m6">
-      <ul class="nav navbar-nav navbar-top">
+      <ul class="nav navbar-top">
         <li><%= link_to "Home",  root_path %></li>
         <li><%= link_to "Physician Sign-in", new_doctors_session_path %></li>
         <li><%= link_to "Patient Sign-in", sessions_path %></li>
@@ -38,6 +38,8 @@
 
     <%= yield %>
   </body>
+
+
   <div class="footer-copyright">
 
       <h6>Please, if you have any questions, please visit our
@@ -45,8 +47,8 @@
         or <a href="<%= contact_pages_path %>">Contact Us</a>
         regarding any information that is not provided, or any additional questions.</h6>
         <p>© <%= Date.today.year %> Virtual Visit</p>
-
-    </div>
+      </div>
+    <!-- </div> -->
   </footer>
 </div>
   </html>
