@@ -5,7 +5,8 @@ class DoctorsSessionsController < ApplicationController
   end
 
   def show
-    @appointments = Appointment.all
+    redirect_to doctors_sessions_path
+    # @appointments = Appointment.all
   end
 
   def new

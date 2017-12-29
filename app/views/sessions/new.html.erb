@@ -1,16 +1,25 @@
-
-
 <h1>Patient Sign In</h1>
+
 <%= form_tag sessions_path do %>
+
 <p>
   <%= label_tag :username %>
   <%= text_field_tag :username %>
 </p>
+
 <p>
   <%= label_tag :password %>
   <%= password_field_tag :password %>
 </p>
+<<<<<<< HEAD
 <button class="btn waves-effect waves-light" type="submit" name="action"> <%= submit_tag "Sign In" %>
   <i class="material-icons right">send</i>
 </button>
+=======
+
+<button class="btn waves-effect waves-light" type="submit" name="action"> <%= submit_tag "Sign In" %>
+  <i class="material-icons right">send</i>
+</button>
+
+>>>>>>> 084d92c543c68c8288a2e4621d8bc378a698dcaf
 <% end %>
