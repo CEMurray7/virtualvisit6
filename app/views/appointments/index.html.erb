@@ -1,7 +1,7 @@
 <h1> hello <h1>
 <% @appointments.sort_by(&:created_at).each do |appointment| %>
-  <p>Name: <%= appointment.name  %></p>
-  <%= link_to "accept appointment", edit_appointment_path(@appointment) %>
+  <p>Name: <%= @appointments.name  %>
+  <%= link_to "accept appointment", edit_appointment_path(appointment.id) %></p>
 
 
 <% end %>
