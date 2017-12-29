@@ -3,7 +3,7 @@
 <h2>Edit your Profile</h2>
 <%= form_for @doctor do |f| %>
 
-  <div class="field"><i class="material-icons">edit</i>
+  <div class="field"><a class="btn btn-floating pulse"><i class="material-icons">edit</i></a>
     <%= f.label :name %><br />
     <%= f.text_field :name, autofocus: true, required: true %>
   </div>

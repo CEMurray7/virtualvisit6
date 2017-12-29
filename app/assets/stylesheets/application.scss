@@ -20,9 +20,23 @@
  // .footer-copyright {
    // background-color: #ee6e73;;
  // }
-
+ body {
+   background-color: #eceff1;
+ }
+ .card-panel {
+   font-size: 18px;
+ }
+ #title {
+   font-size: 36px;
+ }
+#doctor_name {
+  color: black;
+}
+.footer-copyright {
+  text-align: center;
+}
  .input-field label {
-      color: #d7dae0;
+      color: black;
     }
     /* label focus color */
     .input-field input[type=text]:focus + label {

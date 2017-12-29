@@ -1,6 +1,6 @@
 
 
-<h2>Patient Sign Up Form</h2>
+<h2 id="signup">Patient Sign Up Form</h2>
 
 <%= form_for @user do |f| %>
 
@@ -47,7 +47,7 @@
   </div>
   <%= f.label :state %></br>
   <select class="browser-default">
-    <option value="" disabled selected>Choose your State</option>
+    <option class="state" value="" disabled selected>Choose your State</option>
     <option value="AK">Alaska</option>
     <option value="AL">Alabama</option>
     <option value="AR">Arkansas</option>
