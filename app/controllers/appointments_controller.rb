@@ -22,6 +22,7 @@ class AppointmentsController < ApplicationController
   end
 
   def show
+    # @appointment = Appointment.new(user: current_user)
     @appointment = Appointment.find(params[:id])
   end
 
@@ -37,6 +38,6 @@ class AppointmentsController < ApplicationController
 
   private
     def appointment_params
-      params.require(:appointment).permit(:name, :symptoms, :blood_pressure, :temperature, :timestamp)
+      params.require(:appointment).permit(:name, :symptoms, :blood_pressure, :temperature, :timestamp, :medications)
     end
 end
