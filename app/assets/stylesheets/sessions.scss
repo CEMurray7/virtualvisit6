@@ -68,12 +68,18 @@
   color: #424242;
 }
 #left {
-  background-color: #bdbdbd;
+  // background-color: #bdbdbd;
 }
 #right {
-background-color: #bdbdbd;
+// background-color: #bdbdbd;
 }
 #message {
+  padding: 1em;
+  text-align: center;
+  font-size: 16px;
+  color: #424242;
+}
+#view {
   padding: 1em;
   text-align: center;
   font-size: 16px;

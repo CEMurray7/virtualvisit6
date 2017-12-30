@@ -5,7 +5,8 @@ class AppointmentsController < ApplicationController
   end
 
   def create
-    @appointment = Appointment.new(user: current_user)
+    @appointment = Appointment.new(appointment_params)
+    @appointment.user_id = current_user.id
     if @appointment.save!
       redirect_to new_charge_path
     else
@@ -36,7 +37,7 @@ class AppointmentsController < ApplicationController
   end
 
   private
-  
+
   def appointment_params
     params.require(:appointment).permit(:name, :symptoms, :blood_pressure, :temperature, :timestamp, :medications)
   end
