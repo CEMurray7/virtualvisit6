@@ -5,15 +5,16 @@ class AppointmentsController < ApplicationController
   end
 
   def create
+    @appointment = Appointment.new(user: current_user)
+    if @appointment.save!
+      redirect_to new_charge_path
+    else
+      render :new
+    end
   end
 
   def new
     @appointment = Appointment.new(user: current_user)
-    if @appointment.save!
-      redirect_to appointments_path
-    else
-      render :new
-    end
   end
 
   def edit
@@ -21,7 +22,7 @@ class AppointmentsController < ApplicationController
   end
 
   def show
-    @appointments = Appointment.all
+    @appointment = Appointment.find(params[:id])
   end
 
   def update
