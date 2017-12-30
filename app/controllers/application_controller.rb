@@ -4,21 +4,23 @@ class ApplicationController < ActionController::Base
   helper_method  :current_doctor
 
   def current_doctor
-  @current_doctor ||= Doctor.find_by(id: session[:doctor_id])
-end
+    @current_doctor ||= Doctor.find_by(id: session[:doctor_id])
+  end
 
-def require_doctor_logged_in
-  if current_doctor.nil?
-  redirect_to root_path
-end
-end
+  def require_doctor_logged_in
+    if current_doctor.nil?
+      redirect_to root_path
+    end
+  end
+
   def current_user
     @current_user ||= User.find_by(id: session[:user_id])
   end
 
-    def require_logged_in
-      if current_user.nil?
+  def require_logged_in
+    if current_user.nil?
       redirect_to root_path
     end
   end
+
 end

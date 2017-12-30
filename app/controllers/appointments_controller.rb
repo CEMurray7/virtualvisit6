@@ -24,7 +24,7 @@ class AppointmentsController < ApplicationController
 
   def show
     # @appointment = Appointment.new(user: current_user)
-    @appointment = Appointment.find(params[:id])
+    @appointment = Appointment.where(id: params[:id])
   end
 
   def update

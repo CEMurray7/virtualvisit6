@@ -3,16 +3,22 @@
   <thead>
     <tr>
       <th>Patient Name</th>
+      <th>Symptoms</th>
+      <th>Blood Pressure</th>
+      <th>Temperature</th>
+      <th>Medications</th>
       <th>Appointment Details</th>
     </tr>
       <!-- <iframe src="https://tokbox.com/embed/embed/ot-embed.js?embedId=51e6171d-9d47-4c82-ae87-35a53a8c3a68&room=DEFAULT_ROOM&iframe=true" width="600px" height="500px" allow="microphone; camera" ></iframe> -->
   </thead>
   <tbody>
-      <% @appointments.sort_by(&:created_at).each do |a| %>
+      <% @appointments.all.sort_by(&:created_at).each do |a| %>
     <tr>
       <td><%= a.name %></td>
-      <td><%= a.name %></td>
-      <td><%= a.name %></td>
+      <td><%= a.symptoms %></td>
+      <td><%= a.blood_pressure %></td>
+      <td><%= a.temperature %></td>
+      <td><%= a.medications %></td>
       <td><%= link_to "Accept Appointment", edit_appointment_path(a.id) %></td></br>
     </tr>
     <% end %>

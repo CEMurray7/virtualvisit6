@@ -3,12 +3,12 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, required: true, value: current_user.name %>
   </div>
 
 <div class="field">
   <%= f.label :doctor_id %><br />
-  <%= f.number_field :doctor_id %>
+  <%= f.number_field :doctor_id, required: true, value: current_doctor.id %>
 </div>
   <p>
     <%= f.submit 'Confirm' %>

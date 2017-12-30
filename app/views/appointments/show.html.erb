@@ -1,5 +1,9 @@
-
 <h1>Appointment Session</h1>
+
+<%= @appointment.each do |a| %>
+<%= a.name %>
+<% end %>
+
 <i class="material-icons">video_call</i>
 
 <iframe src="https://tokbox.com/embed/embed/ot-embed.js?embedId=51e6171d-9d47-4c82-ae87-35a53a8c3a68&room=DEFAULT_ROOM&iframe=true" width="600px" height="500px" allow="microphone; camera" ></iframe>

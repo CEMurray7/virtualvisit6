@@ -1,5 +1,5 @@
 class DoctorsSessionsController < ApplicationController
-
+  before_action :require_doctor_logged_in, only: [:index]
 
   def index
 
@@ -29,6 +29,7 @@ class DoctorsSessionsController < ApplicationController
 
   def destroy
     session[:doctor_id] = nil
+    session[:user_id] = nil
     redirect_to root_url, notice: 'Logged out!'
   end
 end
