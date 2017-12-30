@@ -14,10 +14,10 @@
 <%= link_to "View Waitlist",  appointments_path() %>
 </div>
 <div class="blue-grey-text">
-<a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i><%= link_to "Edit Profile", edit_doctor_path(current_doctor) %></a>
+<%= link_to "Edit Profile", edit_doctor_path(current_doctor) %>
 
 </div>
-<div class="date"><%= Date.today %></div>
+<div class="date"><%= DateTime.now.strftime("%m/%d/%Y %H:%M") %></div>
 </div>
 
 
