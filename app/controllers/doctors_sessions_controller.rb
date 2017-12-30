@@ -25,4 +25,9 @@ class DoctorsSessionsController < ApplicationController
       redirect_to new_doctor_path
     end
   end
+
+  def destroy
+    session[:doctor_id] = nil
+    redirect_to root_url, notice: 'Logged out!'
+  end
 end
