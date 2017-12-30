@@ -1,6 +1,20 @@
 <h3><%= "Here's the current waiting list, Dr. #{current_doctor.name}" %></h3>
-<% @appointments.sort_by(&:created_at).each do |appointment| %>
-  <p>Name: <%= appointment.name  %>
-  <%= link_to "Accept Appointment", edit_appointment_path(appointment.id) %></p>
-
-<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Patient Name</th>
+      <th>Appointment Details</th>
+    </tr>
+      <!-- <iframe src="https://tokbox.com/embed/embed/ot-embed.js?embedId=51e6171d-9d47-4c82-ae87-35a53a8c3a68&room=DEFAULT_ROOM&iframe=true" width="600px" height="500px" allow="microphone; camera" ></iframe> -->
+  </thead>
+  <tbody>
+      <% @appointments.sort_by(&:created_at).each do |a| %>
+    <tr>
+      <td><%= a.name %></td>
+      <td><%= a.name %></td>
+      <td><%= a.name %></td>
+      <td><%= link_to "Accept Appointment", edit_appointment_path(a.id) %></td></br>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
