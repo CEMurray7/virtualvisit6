@@ -8,23 +8,37 @@
   <div class="row">
 
     <div class="col s12 m4 l3" id="left">
-      <div class="edit">
-        <div class="card">
-          <div class="link">  <%= link_to "Edit Profile", edit_user_path %>
+      <div class="date">
+          <div class="card">
+            <%= DateTime.now.strftime("%m/%d/%Y %H:%M") %>
           </div>
-        </div>
       </div>
       <div class="appointment">
         <div class="card">
           <div class="link"><%= link_to "Make an Appointment", new_appointment_path %></div>
         </div>
       </div>
-
-        <div class="date">
-          <div class="card">
-          <%= Date.today %>
+      <div class="appointmentqueue">
+        <div class="card">
+          <div class="link"><%= link_to "View Appointment Queue", appointment_path %></div>
         </div>
+      </div>
+      <div class="history">
+        <div class="card">
+          <div class="link"><%= link_to "Patient History", sessions_path %></div>
         </div>
+      </div>
+      <div class="edit">
+        <div class="card">
+          <div class="link">  <%= link_to "Edit Profile", edit_user_path %>
+          </div>
+        </div>
+      </div>
+      <div class="logout">
+        <div class="card">
+          <div class="link"><%= link_to "Logout", root_path, method: :delete %></div>
+        </div>
+      </div>
       </div>
 
       <div class="col s12 m8 l9"id="right">
