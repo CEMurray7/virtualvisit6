@@ -1,6 +1,6 @@
-<h1>Welcome to Virtual Visits</h1>
-<p>Appointment</p>
-<h1>please fill out the form below</h1>
+<center><h1>Welcome to Virtual Visit! Appointment System</h1></center>
+
+<h2>Please fill out the form below:</h2>
 
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
 
@@ -8,7 +8,7 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, required: true %>
+    <%= f.text_field :name, autofocus: true, required: true, value: current_user.name %>
   </div>
   <div class="field">
     <%= f.label :symptoms %><br />
