@@ -2,11 +2,11 @@ class DoctorsSessionsController < ApplicationController
 
 
   def index
-    redirect_to new_doctors_session_path
+
   end
 
   def show
-    # redirect_to doctors_sessions_path
+    redirect_to new_doctors_session_path
     # @appointments = Appointment.all
   end
 
