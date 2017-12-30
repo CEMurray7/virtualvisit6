@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :doctors_sessions
   resources :appointments
   resources :charges
+  resources :virtual_visits
 
   resources :pages, only: [] do
     collection do
