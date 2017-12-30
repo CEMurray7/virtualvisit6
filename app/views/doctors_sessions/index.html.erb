@@ -2,7 +2,7 @@
 
   <p>Welcome back!</p>
   <header>
-  <h3><%= "Hello, Dr. #{current_doctor.name}" %></h3>
+  <h3><%= "Hello, Dr. #{current_doctor.name.upcase}" %></h3>
   </header>
 
 <body>
@@ -14,8 +14,10 @@
 <%= link_to "View Waitlist",  appointments_path() %>
 </div>
 <div class="blue-grey-text">
-  <%= link_to "Edit Profile", edit_doctor_path(current_doctor) %>
+<a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i><%= link_to "Edit Profile", edit_doctor_path(current_doctor) %></a>
+
 </div>
+<div class="date"><%= Date.today %></div>
 </div>
 
 

@@ -28,6 +28,7 @@
      </div>
 
   <!-- </div> -->
+  <div class="row">
     <nav class="col s12 m12">
       <ul class="nav col s12 m12 navbar-nav navbar-top">
         <li><%= link_to "Home",  root_path %></li>
@@ -38,6 +39,7 @@
         <li><%= link_to "FAQ", faq_pages_path %></li>
       </ul>
     </nav>
+  </div>
 
 
     <%= yield %>
@@ -50,7 +52,7 @@
         <a href="<%= faq_pages_path %>">FAQ</a> page,
         or <a href="<%= contact_pages_path %>">Contact Us</a>
         regarding any information that is not provided, or any additional questions.</h6>
-        <p>© <%= Date.today.year %> Virtual Visit</p>
+        <p id="brand">© <%= Date.today.year %> Virtual Visit</p>
 
       </div>
     </div>

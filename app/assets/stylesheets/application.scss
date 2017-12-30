@@ -27,9 +27,9 @@
  body {
    background-color: #eceff1;
  }
- .card-panel {
-   font-size: 18px;
- }
+ // .card-panel {
+ //   font-size: 18px;
+ // }
  #title {
    font-size: 36px;
  }
@@ -64,4 +64,22 @@
     /* icon prefix focus color */
     .input-field .prefix.active {
       color: #000;
+    }
+    #brand {
+      text-align: center;
+      color: #616161;
+    }
+    a:link {
+      color: #424242;
+    }
+    a:visited {
+      color: #424242;
+    }
+    a:hover {
+      color: #424242;
+      background-color: #e57373;
+    }
+    a:active {
+      color: #424242;
+      background-color: #424242;
     }

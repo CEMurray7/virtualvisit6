@@ -11,6 +11,71 @@
 .large-material-icons {
 
 }
+#greeting h3 {
+  font-size: 36px;
+}
+.row {
+
+}
+.card {
+  background-color: #eceff1;
+  text-align: center;
+  color: #424242;
+  padding: 1em;
+}
+// .card-panel {
+//   height: 6em;
+//   width: 8em;
+// }
 .edit {
+
   font-size: 18px;
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.date {
+  font-size: 18px;
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.appointment {
+  font-size: 24px;
+  text-align: center;
+  // padding: 2em;
+}
+#last {
+  // font: "Lucida" 24px, serif;
+  padding: 1em;
+  text-align: center;
+  font-size: 16px;
+  color: #424242;
+}
+.link {
+  font-size: 16px;
+}
+.link a:link {
+  color: #424242;
+}
+.link a:visited {
+  color: #424242;
+}
+.link a:hover {
+  color: #424242;
+}
+.link a:active {
+  color: #424242;
+}
+#left {
+  background-color: #bdbdbd;
+}
+#right {
+background-color: #bdbdbd;
+}
+#message {
+  padding: 1em;
+  text-align: center;
+  font-size: 16px;
+  color: #424242;
 }
