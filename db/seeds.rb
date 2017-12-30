@@ -74,5 +74,6 @@ Appointment.create(user_id: 42,
                     name:  "Donnie Darko",
                     symptoms: "fever",
                     blood_pressure: "140/70",
-                    temperature: "102"
+                    temperature: "102",
+                    medications: "crazy pills"
                   )
