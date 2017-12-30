@@ -17,7 +17,12 @@ class SessionsController < ApplicationController
    @user = User.all
  end
 
- def index
-   redirect_to new_session_path
- end
+  def index
+    redirect_to new_session_path
+  end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_url, notice: 'Logged out!'
+  end
 end
