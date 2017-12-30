@@ -1,40 +1,29 @@
-<table>
-  <thead>
-    <div class="blue-grey-text">
-      <%= link_to "Make an Appointment", new_appointment_path %>
-      <p><%= "Hello, #{current_user.name}" %>
-        <%= link_to "Edit Profile", edit_user_path %>
-</p>
-</div>
-
-  <head>
 
       <h3><%= "Hello, #{current_user.name}" %></h3>
-
-
-<%= link_to "Edit Profile", edit_user_path %>
-
+  <body>
+<!-- <div class="container"> -->
 <div class="row">
 
-     <div class="col s3">
-       <!-- Grey navigation panel -->
-     </div>
-
-     <div class="col s9">
-       <!-- Teal page content  -->
-     </div>
-
-   </div>
-  <body>
+  <div class="col s12 m4 l3">
+    <div class="edit">
+    <%= link_to "Edit Profile", edit_user_path %>
+    </div>
     <div class="blue-grey-text">
-      <%= link_to "Make an Appointment", appointment_path %>
+      <%= link_to "Make an Appointment", new_appointment_path %>
       </div>
-  <p>
-    <i class="large material-icons">video_call</i>
-  </p>
-  <div class="video-container">
-<iframe src="https://tokbox.com/embed/embed/ot-embed.js?embedId=51e6171d-9d47-4c82-ae87-35a53a8c3a68&room=DEFAULT_ROOM&iframe=true" width="600px" height="500px" allow="microphone; camera" ></iframe></div>
-</div>
+    </div>
+
+
+     <div class="col s12 m8 l9">
+       <p>
+         <i class="large material-icons">video_call</i>
+       </p>
+       <div class="video-container">
+     <iframe src="https://tokbox.com/embed/embed/ot-embed.js?embedId=51e6171d-9d47-4c82-ae87-35a53a8c3a68&room=DEFAULT_ROOM&iframe=true" width="600px" height="500px" allow="microphone; camera" ></iframe></div>
+     </div>
+     </div>
+<!-- </div> -->
+
   </body>
 
 
