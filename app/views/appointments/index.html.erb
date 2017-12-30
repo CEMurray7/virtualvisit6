@@ -1,7 +1,6 @@
-<h1><%= "Hello, Dr. #{current_doctor.name}" %><h1>
+<h3><%= "Here's the current waiting list, Dr. #{current_doctor.name}" %></h3>
 <% @appointments.sort_by(&:created_at).each do |appointment| %>
-  <p>Name: <%= @appointments.name  %>
-  <%= link_to "accept appointment", edit_appointment_path(appointment.id) %></p>
-
+  <p>Name: <%= appointment.name  %>
+  <%= link_to "Accept Appointment", edit_appointment_path(appointment.id) %></p>
 
 <% end %>
