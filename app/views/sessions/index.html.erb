@@ -41,34 +41,11 @@
       </div>
 
       <div class="col s12 m8 l9" id="right">
-        <table>
-          <thead>
-            <tr>
-              <th>Patient Name</th>
-              <th>Date Visited</th>
-              <th>Blood Pressure</th>
-              <th>Temperature</th>
-              <th>Medications</th>
-              <th>Appointment Details</th>
-            </tr>
-              <!-- <iframe src="https://tokbox.com/embed/embed/ot-embed.js?embedId=51e6171d-9d47-4c82-ae87-35a53a8c3a68&room=DEFAULT_ROOM&iframe=true" width="600px" height="500px" allow="microphone; camera" ></iframe> -->
-          </thead>
-          <tbody>
-              <% @appointment.all.sort_by(&:created_at) do |a| %>
-              <%# unless a.doctor == nil %>
-            <tr>
-              <td><%= a.name %></td>
-              <td><%= a.created_at.strftime("%m/%d/%Y")%></td>
-              <td><%= a.symptoms %></td>
-              <td><%= a.blood_pressure %></td>
-              <td><%= a.temperature %></td>
-              <td><%= a.medications %></td>
-              <td><%= link_to "Accept Appointment", edit_appointment_path(a.id) %></td></br>
-            </tr>
-            <%# end %>
-            <% end %>
-          </tbody>
-        </table>
+
+
+      <p id="last">Your last sign-in was <%= Date.yesterday.strftime("%m/%d/%Y") %></p>
+      <p id="message"><i class="material-icons">email</i>Message from your last Virtual Visit</p>
+      <p id="view"><i class="material-icons">ondemand_video</i>Watch your last Virtual Visit Video</p>
       <!-- <div class="video-container">
       <iframe src="https://tokbox.com/embed/embed/ot-embed.js?embedId=51e6171d-9d47-4c82-ae87-35a53a8c3a68&room=DEFAULT_ROOM&iframe=true" width="600px" height="500px" allow="microphone; camera" ></iframe></div>
     </div> -->
