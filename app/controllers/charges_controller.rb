@@ -19,7 +19,7 @@ class ChargesController < ApplicationController
       :description => 'Rails Stripe customer',
       :currency    => 'usd'
     )
-    redirect_to virtual_visit_path(current_user)
+    redirect_to virtual_visits_path(current_user)
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
