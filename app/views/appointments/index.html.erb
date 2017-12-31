@@ -13,6 +13,7 @@
   </thead>
   <tbody>
       <% @appointments.all.sort_by(&:created_at).each do |a| %>
+      <% if a.doctor == nil %>
     <tr>
       <td><%= a.name %></td>
       <td><%= a.symptoms %></td>
@@ -21,6 +22,7 @@
       <td><%= a.medications %></td>
       <td><%= link_to "Accept Appointment", edit_appointment_path(a.id) %></td></br>
     </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>

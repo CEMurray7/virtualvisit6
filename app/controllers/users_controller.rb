@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      redirect_to session_path(@user)
+      redirect_to sessions_path(@user)
     else
       render 'edit'
     end
