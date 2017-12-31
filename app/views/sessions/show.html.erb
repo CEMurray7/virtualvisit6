@@ -1,7 +1,7 @@
 <body>
   <div class="card">
 
-  <h3 id="greeting"><%= "Here's your Patient History, #{current_user.name.upcase}!" %></h3>
+  <h3 id="greeting"><%= "Welcome Back, #{current_user.name.upcase}!" %></h3>
   </div>
   <!-- <div class="container"> -->
   <div class="row">
@@ -17,7 +17,7 @@
           <div class="link"><%= link_to "Make an Appointment", new_appointment_path %></div>
         </div>
       </div>
-      <div class="appointmentqueue">
+      <div class="chat">
         <div class="card">
           <div class="link"><%= link_to "Chat With Your Doctor", appointment_path %></div>
         </div>
@@ -47,7 +47,7 @@
       <p id="message"><i class="material-icons">email</i>Message from your last Virtual Visit</p>
       <p id="view"><i class="material-icons">ondemand_video</i>Watch your last Virtual Visit Video</p>
       <div class="script">
-        <img class="responsive-img" src="logo-red-flag-tm.png" alt="walgreens logo">
+        <!-- <img class="responsive-img" src="logo-red-flag.png" alt="walgreens logo"> -->
        <p id="pickup">Your Medication has been called into the pharmacy of your choice</p>
      </div>
   </div>
