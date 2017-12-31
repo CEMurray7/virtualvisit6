@@ -1,0 +1,28 @@
+<h3><%= "Patient Appointment History, #{current_user.name}" %></h3>
+<table>
+  <thead>
+    <tr>
+      <th>Patient Name</th>
+      <th>Symptoms</th>
+      <th>Blood Pressure</th>
+      <th>Temperature</th>
+      <th>Medications</th>
+      <th>Appointment Details</th>
+    </tr>
+      <!-- <iframe src="https://tokbox.com/embed/embed/ot-embed.js?embedId=51e6171d-9d47-4c82-ae87-35a53a8c3a68&room=DEFAULT_ROOM&iframe=true" width="600px" height="500px" allow="microphone; camera" ></iframe> -->
+  </thead>
+  <tbody>
+      <% @appointments.all.sort_by(&:created_at).each do |a| %>
+    <tr>
+      <td><%= a.name %></td>
+      <td><%= a.symptoms %></td>
+      <td><%= a.blood_pressure %></td>
+      <td><%= a.temperature %></td>
+      <td><%= a.medications %></td>
+
+</tr>
+<% end %>
+<td><%= link_to "User Dashboard", session_path(current_user) %></td></br>
+
+</tbody>
+</table>

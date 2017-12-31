@@ -20,6 +20,7 @@ before_action :require_logged_in, only: [:show]
   def index
   end
 
+
   def destroy
     session[:doctor_id] = nil
     session[:user_id] = nil

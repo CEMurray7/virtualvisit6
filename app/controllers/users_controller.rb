@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @appointments = Appointment.where(user: current_user)
   end
 
   def create
