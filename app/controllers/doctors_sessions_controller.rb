@@ -28,8 +28,8 @@ class DoctorsSessionsController < ApplicationController
   end
 
   def destroy
+    Doctor.find(session[:doctor_id]).destroy
     session[:doctor_id] = nil
-    session[:user_id] = nil
-    redirect_to root_url, notice: 'Logged out!'
+    redirect_to root_path, notice: 'Logged out!'
   end
 end

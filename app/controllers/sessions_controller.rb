@@ -23,8 +23,8 @@ before_action :require_logged_in, only: [:show]
 
 
   def destroy
-    session[:doctor_id] = nil
+    User.find(session[:user_id]).destroy
     session[:user_id] = nil
-    redirect_to root_url, notice: 'Logged out!'
+    redirect_to root_path, notice: 'Logged out!'
   end
 end
