@@ -1,7 +1,7 @@
 <body>
   <div class="card">
 
-  <h3 id="greeting"><%= "Welcome back, #{current_user.name.upcase}!" %></h3>
+  <h3 id="greeting"><%= "Here's your Patient History, #{current_user.name.upcase}!" %></h3>
   </div>
   <!-- <div class="container"> -->
   <div class="row">
@@ -19,12 +19,12 @@
       </div>
       <div class="appointmentqueue">
         <div class="card">
-          <div class="link"><%# link_to "View Appointment Queue", appointment_path %></div>
+          <div class="link"><%= link_to "Chat With Your Doctor", appointment_path %></div>
         </div>
       </div>
       <div class="history">
         <div class="card">
-          <div class="link"><%= link_to "Patient History", users_path %></div>
+          <div class="link"><%= link_to "Patient History", sessions_path %></div>
         </div>
       </div>
       <div class="edit">
@@ -41,31 +41,29 @@
       </div>
 
       <div class="col s12 m8 l9" id="right">
-        <h3><%= "Patient Appointment History, #{current_user.name}" %></h3>
         <table>
           <thead>
             <tr>
-              <th>Patient Name</th>
+              <th>Date Visited</th>
               <th>Symptoms</th>
               <th>Blood Pressure</th>
               <th>Temperature</th>
               <th>Medications</th>
-              <th>Appointment Details</th>
             </tr>
               <!-- <iframe src="https://tokbox.com/embed/embed/ot-embed.js?embedId=51e6171d-9d47-4c82-ae87-35a53a8c3a68&room=DEFAULT_ROOM&iframe=true" width="600px" height="500px" allow="microphone; camera" ></iframe> -->
           </thead>
           <tbody>
-              <% @appointments.all.sort_by(&:created_at).each do |a| %>
+              <% @appointment.sort_by(&:created_at).each do |a| %>
+              <%# unless doctor_id == nil %>
             <tr>
-              <td><%= a.name %></td>
+              <td><%= a.created_at.strftime("%m/%d/%Y") %></td>
               <td><%= a.symptoms %></td>
               <td><%= a.blood_pressure %></td>
               <td><%= a.temperature %></td>
               <td><%= a.medications %></td>
-
+            <%# end %>
         </tr>
         <% end %>
-        <td><%= link_to "User Dashboard", session_path(current_user) %></td></br>
 
         </tbody>
         </table>
