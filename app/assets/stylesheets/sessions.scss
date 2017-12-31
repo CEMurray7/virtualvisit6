@@ -28,30 +28,28 @@
 //   width: 8em;
 // }
 .edit {
-
   font-size: 18px;
   text-align: center;
   padding-top: 2em;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 }
 .date {
   font-size: 18px;
   text-align: center;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 .appointment {
   font-size: 24px;
   text-align: center;
-  // padding: 2em;
+  padding-bottom: 1em;
 }
-#last {
-  // font: "Lucida" 24px, serif;
-  padding: 1em;
+.history {
+  font-size: 18px;
   text-align: center;
-  font-size: 16px;
-  color: #424242;
+  padding-bottom: 1em;
 }
+
 .link {
   font-size: 16px;
 }
@@ -73,15 +71,27 @@
 #right {
 // background-color: #bdbdbd;
 }
+#last {
+  // font: "Lucida" 24px, serif;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  text-align: right;
+  font-size: 16px;
+  color: #424242;
+}
 #message {
-  padding: 1em;
-  text-align: center;
+  padding-bottom: 2em;
+  text-align: right;
   font-size: 16px;
   color: #424242;
 }
 #view {
-  padding: 1em;
-  text-align: center;
+  padding-bottom: 2em;
+  text-align: right;
   font-size: 16px;
   color: #424242;
+}
+.script {
+  text-align: right;
+  align-items: flex-end;
 }

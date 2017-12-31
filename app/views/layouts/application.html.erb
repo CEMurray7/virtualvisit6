@@ -31,7 +31,11 @@
   <div class="row">
     <nav class="col s12 m12">
       <ul class="nav col s12 m12 navbar-nav navbar-top">
-        <li><%= link_to "Home",  root_path %></li>
+        <li><%=
+           link_to_if(@current_user.nil?, "Home", { controller: "pages", action: "home" }) do
+             link_to("Home", { controller: "sessions", action: "show", id: @current_user })
+
+         end%></li>
         <li><%= link_to "Physician Sign-in", new_doctors_session_path %></li>
         <li><%= link_to "Patient Sign-in", sessions_path %></li>
         <li><%= link_to "Patient Sign Up", new_user_path %></li>
@@ -41,7 +45,7 @@
     </nav>
   </div>
 
-  
+
     <%= yield %>
   </body>
 

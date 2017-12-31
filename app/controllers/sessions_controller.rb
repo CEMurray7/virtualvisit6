@@ -7,18 +7,19 @@ before_action :require_logged_in, only: [:show]
    @user = User.find_by(username: params[:username]).try(:authenticate, params[:password])
    if @user
      session[:user_id] = @user.id
-     redirect_to sessions_path(@user)
+     redirect_to session_path(@user)
    else
      flash[:notice] = "Not a valid username.  Please sign up first!"
      redirect_to new_user_path
    end
   end
   def show
-    @appointment = Appointment.where(user_id: current_user)
+    @user = User.all
   end
 
   def index
-  end
+    redirect_to new_session_path
+    end
 
 
   def destroy
