@@ -1,7 +1,7 @@
 <body>
   <div class="card">
 
-  <h3 id="greeting"><%= "Here's your Patient History, #{current_user.name.upcase}!" %></h3>
+  <h3 id="greeting"><%= "Welcome Back, #{current_user.name.upcase}!" %></h3>
   </div>
   <!-- <div class="container"> -->
   <div class="row">
@@ -17,7 +17,7 @@
           <div class="link"><%= link_to "Make an Appointment", new_appointment_path %></div>
         </div>
       </div>
-      <div class="appointmentqueue">
+      <div class="chat">
         <div class="card">
           <div class="link"><%= link_to "Chat With Your Doctor", appointment_path %></div>
         </div>
