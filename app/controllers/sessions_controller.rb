@@ -18,8 +18,9 @@ class SessionsController < ApplicationController
  end
 
   def index
-    redirect_to new_session_path
-  end
+    @appointments = Appointment.where(user: current_user)
+
+   end
 
   def destroy
     session[:doctor_id] = nil
