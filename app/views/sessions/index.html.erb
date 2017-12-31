@@ -22,9 +22,10 @@
           <div class="link"><%# link_to "View Appointment Queue", appointment_path %></div>
         </div>
       </div>
+      <!-- session_path(current_user) -->
       <div class="history">
         <div class="card">
-          <div class="link"><%= link_to "Patient History", session_path(current_user) %></div>
+          <div class="link"><%= link_to "Patient History", users_path %></div>
         </div>
       </div>
       <div class="edit">
