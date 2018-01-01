@@ -1,7 +1,6 @@
 <% if current_doctor %>
 <body>
   <div class="card">
-
   <h3 id="greeting"><%= "Here's the current waiting list, Dr. #{current_doctor.name}" %></h3>
   </div>
 
@@ -33,16 +32,12 @@
       </div>
       </div>
 
-</body>
-<!-- <div class="container"> -->
-
-
 <div class="col s12 m8 l9" id="right">
   <table>
     <thead>
       <tr>
         <th>Patient Name</th>
-        <th>Patient Details</th>
+        <th>Symptoms</th>
         <th>Blood Pressure</th>
         <th>Temperature</th>
         <th>Medications</th>
@@ -58,7 +53,7 @@
         <td><%= a.symptoms %></td>
         <td><%= a.blood_pressure %></td>
         <td><%= a.temperature %></td>
-        <td><%= a.medications %></td>
+        <td><% a.medications %></td>
         <td><%= link_to "Accept Appointment", edit_appointment_path(a.id) %></td></br>
       <% end %>
       </tr>
