@@ -46,9 +46,7 @@
             <tr>
               <th>Date Visited</th>
               <th>Symptoms</th>
-              <th>Blood Pressure</th>
-              <th>Temperature</th>
-              <th>Medications</th>
+              <th>Follow Up Notes</th>
             </tr>
               <!-- <iframe src="https://tokbox.com/embed/embed/ot-embed.js?embedId=51e6171d-9d47-4c82-ae87-35a53a8c3a68&room=DEFAULT_ROOM&iframe=true" width="600px" height="500px" allow="microphone; camera" ></iframe> -->
           </thead>
@@ -58,9 +56,7 @@
             <tr>
               <td><%= a.created_at.strftime("%m/%d/%Y") %></td>
               <td><%= a.symptoms %></td>
-              <td><%= a.blood_pressure %></td>
-              <td><%= a.temperature %></td>
-              <td><%= a.medications %></td>
+              <td><%= a.follow_up %>
             <% end %>
         </tr>
 </tbody>
