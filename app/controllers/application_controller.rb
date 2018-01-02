@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
     @current_doctor ||= Doctor.find_by(id: session[:doctor_id])
   end
 
+
+
   def require_doctor_logged_in
     if current_doctor.nil?
       redirect_to root_path
