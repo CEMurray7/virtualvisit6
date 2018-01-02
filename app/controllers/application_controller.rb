@@ -3,6 +3,10 @@ class ApplicationController < ActionController::Base
   helper_method  :current_user
   helper_method  :current_doctor
 
+  def current_appointment
+    @current_appointment ||= Appointment.find(params[:id])
+  end
+
   def current_doctor
     @current_doctor ||= Doctor.find_by(id: session[:doctor_id])
   end

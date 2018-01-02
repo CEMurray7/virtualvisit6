@@ -29,7 +29,9 @@ class AppointmentsController < ApplicationController
 
   def update
     @appointment = Appointment.find(params[:id])
-    if @appointment.update_attributes(doctor_id: current_doctor.id)
+    appointment_params.merge(doctor: current_doctor)
+    # if @appointment.update_attributes(doctor_id: current_doctor.id)
+    if @appointment.update(appointment_params)
       redirect_to virtual_visit_path
     else
       render 'edit'
@@ -39,6 +41,6 @@ class AppointmentsController < ApplicationController
   private
 
   def appointment_params
-    params.require(:appointment).permit(:name, :symptoms, :blood_pressure, :temperature, :timestamp, :medications)
+    params.require(:appointment).permit(:name, :symptoms, :blood_pressure, :temperature, :timestamp, :medications, :follow_up)
   end
 end
