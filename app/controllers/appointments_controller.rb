@@ -8,7 +8,7 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new(appointment_params)
     @appointment.user_id = current_user.id
     if @appointment.save!
-      redirect_to new_charge_path
+      redirect_to virtual_visit_path(@appointment)
     else
       render :new
     end
